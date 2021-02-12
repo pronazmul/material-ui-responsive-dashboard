@@ -1,0 +1,39 @@
+import { makeStyles } from "@material-ui/core";
+
+const drawerWidth = 240;
+const dashboardStyle = makeStyles((theme) => ({
+  menuButton: {
+    root: {
+      display: "flex"
+    },
+    marginRight: theme.spacing(2),
+    [theme.breakpoints.up("sm")]: {
+      display: "none"
+    }
+  },
+
+  AppBar: {
+    [theme.breakpoints.up("sm")]: {
+      width: `calc(100% - ${drawerWidth}px)`
+    }
+  },
+
+  drawer: {
+    [theme.breakpoints.up("sm")]: {
+      width: drawerWidth,
+      flexShrink: 0
+    }
+  },
+  drawerPaper: {
+    width: drawerWidth
+  },
+
+  toolbar: theme.mixins.toolbar,
+
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(2)
+  }
+}));
+
+export default dashboardStyle;
