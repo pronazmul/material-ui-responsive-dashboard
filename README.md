@@ -1,2 +1,10 @@
 # material-ui-responsive-dashboard
-Created with CodeSandbox
+
+##insalled Packeges
+
+> react
+> react-dom
+> react-router-dom
+> react-scripts
+> material-ui/core
+> material-ui/icons
