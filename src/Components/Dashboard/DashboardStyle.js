@@ -18,22 +18,26 @@ const dashboardStyle = makeStyles((theme) => ({
     }
   },
 
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(2),
+    [theme.breakpoints.up("sm")]: {
+      width: `calc(100% - ${drawerWidth}px)`,
+      marginLeft: drawerWidth
+    }
+  },
   drawer: {
     [theme.breakpoints.up("sm")]: {
       width: drawerWidth,
       flexShrink: 0
     }
   },
+
   drawerPaper: {
     width: drawerWidth
   },
 
-  toolbar: theme.mixins.toolbar,
-
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing(2)
-  }
+  toolbar: theme.mixins.toolbar
 }));
 
 export default dashboardStyle;
