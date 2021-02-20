@@ -1,5 +1,6 @@
 import { Grid, makeStyles, TextField, Typography } from "@material-ui/core";
 import { useState } from "react";
+import MuiTextField from "./formComponent/MuiTextField";
 
 const useStyle = makeStyles((theme) => ({
   root: {
@@ -49,7 +50,7 @@ const StudentResister = () => {
           </Grid>
           <Grid item xs={false} sm={1}></Grid>
           <Grid item xs={12} sm={5} className={classes.root}>
-            <TextField
+            <MuiTextField
               fullWidth
               label="Full Name"
               name="fullName"
