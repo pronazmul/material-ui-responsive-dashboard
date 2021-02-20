@@ -1,5 +1,6 @@
 import { Grid, makeStyles, Typography } from "@material-ui/core";
 import FormHandling from "./formComponent/FormHandling";
+import MuiCheckBox from "./formComponent/MuiCheckBox";
 import MuiRadioGroup from "./formComponent/MuiRadioGroup";
 import MuiSelectOption from "./formComponent/MuiSelectOption";
 import MuiTextField from "./formComponent/MuiTextField";
@@ -22,6 +23,7 @@ const StudentResister = () => {
     city: "",
     gender: "male",
     department: "",
+    agree: false,
     date: new Date()
   };
 
@@ -35,11 +37,12 @@ const StudentResister = () => {
     { id: 0, value: "Web Developer", title: "Web Developer" },
     { id: 1, value: "Graphic Designer", title: "Graphic Designer" },
     { id: 2, value: "Amazon Affiliate", title: "Amazon Affiliate" },
-    { id: 3, value: "Amazon Affiliate", title: "Amazon Affiliate" },
-    { id: 4, value: "SEO Expart", title: "SEO Expart" }
+    { id: 3, value: "SEO Expart", title: "SEO Expart" }
   ];
 
-  const { studentData, handleChange } = FormHandling(initialValue);
+  const { studentData, setStudentData, handleChange } = FormHandling(
+    initialValue
+  );
 
   const {
     fullName,
@@ -48,9 +51,10 @@ const StudentResister = () => {
     department,
     phoneNumber,
     city,
+    agree,
     date
   } = studentData;
-  console.log(department, gender);
+  console.log(agree);
   return (
     <>
       <form autoComplete="off">
@@ -93,6 +97,14 @@ const StudentResister = () => {
                 value={department}
                 onChange={handleChange}
                 DepartmentOptions={DepartmentOptions}
+              />
+              <MuiCheckBox
+                name="agree"
+                value={agree}
+                label="Agree with Terms & Conditons"
+                onChange={handleChange}
+                setStudentData={setStudentData}
+                studentData={studentData}
               />
             </Grid>
             <Grid item xs={false} sm={1}></Grid>
