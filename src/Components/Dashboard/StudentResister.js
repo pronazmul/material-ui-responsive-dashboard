@@ -1,10 +1,12 @@
 import { Grid, makeStyles, Typography } from "@material-ui/core";
 import FormHandling from "./formComponent/FormHandling";
+import MuiRadioGroup from "./formComponent/MuiRadioGroup";
+import MuiSelectOption from "./formComponent/MuiSelectOption";
 import MuiTextField from "./formComponent/MuiTextField";
 
 const useStyle = makeStyles((theme) => ({
   root: {
-    "& .MuiTextField-root": {
+    "&": {
       margin: theme.spacing(1)
     }
   }
@@ -18,15 +20,40 @@ const StudentResister = () => {
     email: "",
     phoneNumber: "",
     city: "",
-    class: "",
+    gender: "male",
+    department: "",
     date: new Date()
   };
 
+  const RadioItem = [
+    { id: 0, value: "male", label: "Male" },
+    { id: 1, value: "female", label: "Female" },
+    { id: 2, value: "other", label: "Other" }
+  ];
+
+  const DepartmentOptions = [
+    { id: 0, value: "Web Developer", title: "Web Developer" },
+    { id: 1, value: "Graphic Designer", title: "Graphic Designer" },
+    { id: 2, value: "Amazon Affiliate", title: "Amazon Affiliate" },
+    { id: 3, value: "Amazon Affiliate", title: "Amazon Affiliate" },
+    { id: 4, value: "SEO Expart", title: "SEO Expart" }
+  ];
+
   const { studentData, handleChange } = FormHandling(initialValue);
 
+  const {
+    fullName,
+    gender,
+    email,
+    department,
+    phoneNumber,
+    city,
+    date
+  } = studentData;
+  console.log(department, gender);
   return (
     <>
-      <form>
+      <form autoComplete="off">
         <Grid container direction="row" alignItems="center" justify="center">
           <Grid item container xs={12}>
             <Typography variant="h5" align="center">
@@ -40,17 +67,32 @@ const StudentResister = () => {
                 fullWidth
                 label="Full Name"
                 name="fullName"
-                value={studentData.fullName}
+                value={fullName}
+                onChange={handleChange}
+              />
+              <MuiTextField
+                fullWidth
+                label="Email Address"
+                name="email"
+                value={email}
                 onChange={handleChange}
               />
             </Grid>
             <Grid item xs={12} sm={5} className={classes.root}>
-              <MuiTextField
-                fullWidth
-                label="City"
-                name="city"
-                value={studentData.city}
+              <MuiRadioGroup
+                row
+                label="Gender"
+                name="gender"
+                value={gender}
                 onChange={handleChange}
+                RadioItem={RadioItem}
+              />
+              <MuiSelectOption
+                label="Choose Department"
+                name="department"
+                value={department}
+                onChange={handleChange}
+                DepartmentOptions={DepartmentOptions}
               />
             </Grid>
             <Grid item xs={false} sm={1}></Grid>
