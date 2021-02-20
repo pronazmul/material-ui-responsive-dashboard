@@ -6,7 +6,7 @@ const MuiTextField = (props) => {
     <TextField
       label={label}
       name={name}
-      variant={variant}
+      variant={variant || "standard"}
       value={value}
       onChange={onChange}
       {...exist}
