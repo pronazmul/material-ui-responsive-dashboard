@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core";
-import { FilterNone } from "@material-ui/icons";
 
 const drawerWidth = 240;
 const dashboardStyle = makeStyles((theme) => ({

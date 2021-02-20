@@ -18,7 +18,7 @@ const MainDrawer = ({ mobileOpen, setMobileOpen }) => {
           }}
         >
           <Box p={2} component="span">
-            <Typography variant="h5">Hello School</Typography>
+            <Typography variant="h5">Dashboard</Typography>
           </Box>
           <Divider />
           <DrawerList />

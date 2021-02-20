@@ -15,7 +15,7 @@ const DashboardAppbar = ({ mobileOpen, setMobileOpen }) => {
         >
           <Menu />
         </IconButton>
-        <Typography variant="h6">Hello School</Typography>
+        <Typography variant="h6">Dashboard</Typography>
       </Toolbar>
     </AppBar>
   );
