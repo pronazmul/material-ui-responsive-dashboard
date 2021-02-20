@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core";
+import { FilterNone } from "@material-ui/icons";
 
 const drawerWidth = 240;
 const dashboardStyle = makeStyles((theme) => ({
@@ -30,6 +31,14 @@ const dashboardStyle = makeStyles((theme) => ({
     [theme.breakpoints.up("sm")]: {
       width: drawerWidth,
       flexShrink: 0
+    },
+    "& ::-webkit-scrollbar": {
+      display: "none"
+    }
+  },
+  TemporaryDrawer: {
+    "& ::-webkit-scrollbar": {
+      display: "none"
     }
   },
 

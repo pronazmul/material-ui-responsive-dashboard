@@ -1,5 +1,6 @@
-import { Box, Paper, Typography } from "@material-ui/core";
+import { Box, Paper } from "@material-ui/core";
 import dashboardStyle from "./DashboardStyle";
+import StudentResister from "./StudentResister";
 
 const MainContent = () => {
   const classes = dashboardStyle();
@@ -8,9 +9,7 @@ const MainContent = () => {
       <div className={classes.toolbar} />
       <Paper>
         <Box p={3}>
-          <Typography variant="h5">
-            This is Dashboard Main content Section
-          </Typography>
+          <StudentResister />
         </Box>
       </Paper>
     </main>

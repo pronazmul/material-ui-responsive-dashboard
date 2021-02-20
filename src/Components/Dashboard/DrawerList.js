@@ -14,6 +14,12 @@ const navList = [
   { id: 3, linkName: "Teachers", icon: <VerifiedUser /> },
   { id: 4, linkName: "Staff", icon: <StarHalf /> },
   { id: 5, linkName: "Vehicle", icon: <VerticalSplit /> },
+  { id: 6, linkName: "Hostel", icon: <HouseTwoTone /> },
+  { id: 1, linkName: "Dashboard", icon: <Dashboard /> },
+  { id: 2, linkName: "Students", icon: <SupervisedUserCircle /> },
+  { id: 3, linkName: "Teachers", icon: <VerifiedUser /> },
+  { id: 4, linkName: "Staff", icon: <StarHalf /> },
+  { id: 5, linkName: "Vehicle", icon: <VerticalSplit /> },
   { id: 6, linkName: "Hostel", icon: <HouseTwoTone /> }
 ];
 

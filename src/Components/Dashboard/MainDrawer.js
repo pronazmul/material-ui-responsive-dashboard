@@ -1,4 +1,4 @@
-import { Drawer, Hidden } from "@material-ui/core";
+import { Box, Divider, Drawer, Hidden, Typography } from "@material-ui/core";
 import dashboardStyle from "./DashboardStyle";
 import DrawerList from "./DrawerList";
 
@@ -8,6 +8,7 @@ const MainDrawer = ({ mobileOpen, setMobileOpen }) => {
     <nav className={classes.drawer}>
       <Hidden smUp>
         <Drawer
+          className={classes.TemporaryDrawer}
           variant="temporary"
           anchor="left"
           open={mobileOpen}
@@ -16,6 +17,10 @@ const MainDrawer = ({ mobileOpen, setMobileOpen }) => {
             paper: classes.drawerPaper
           }}
         >
+          <Box p={2} component="span">
+            <Typography variant="h5">Hello School</Typography>
+          </Box>
+          <Divider />
           <DrawerList />
         </Drawer>
       </Hidden>
