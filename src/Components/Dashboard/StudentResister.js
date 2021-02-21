@@ -40,9 +40,7 @@ const StudentResister = () => {
     { id: 3, value: "SEO Expart", title: "SEO Expart" }
   ];
 
-  const { studentData, setStudentData, handleChange } = FormHandling(
-    initialValue
-  );
+  const { studentData, handleChange } = FormHandling(initialValue);
 
   const {
     fullName,
@@ -103,8 +101,6 @@ const StudentResister = () => {
                 value={agree}
                 label="Agree with Terms & Conditons"
                 onChange={handleChange}
-                setStudentData={setStudentData}
-                studentData={studentData}
               />
             </Grid>
             <Grid item xs={false} sm={1}></Grid>

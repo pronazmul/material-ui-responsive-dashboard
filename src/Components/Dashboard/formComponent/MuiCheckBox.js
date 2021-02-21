@@ -1,15 +1,11 @@
 import { Checkbox, FormControl, FormControlLabel } from "@material-ui/core";
 
 const MuiCheckBox = (props) => {
-  const {
-    name,
-    value,
-    label,
-    onChange,
-    color,
-    setStudentData,
-    studentData
-  } = props;
+  const { name, value, label, onChange, color } = props;
+
+  const convertEventToParam = (name, value) => ({
+    target: { name, value }
+  });
 
   return (
     <FormControl>
@@ -20,7 +16,9 @@ const MuiCheckBox = (props) => {
             name={name}
             color={color || "primary"}
             checked={value}
-            onChange={() => setStudentData({ ...studentData, agree: !value })}
+            onChange={(e) =>
+              onChange(convertEventToParam(name, e.target.checked))
+            }
           />
         }
       />

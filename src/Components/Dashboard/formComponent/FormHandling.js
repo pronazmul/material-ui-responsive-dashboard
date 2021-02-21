@@ -5,6 +5,7 @@ const FormHandling = (initialValue) => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
+
     setStudentData({
       ...studentData,
       [name]: value
