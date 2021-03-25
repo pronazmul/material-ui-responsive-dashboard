@@ -4,7 +4,6 @@ import DashboardAppbar from "./DashboardAppbar";
 import dashboardStyle from "./DashboardStyle";
 import MainContent from "./MainContent";
 import MainDrawer from "./MainDrawer";
-
 const Dashboard = () => {
   const classes = dashboardStyle();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -13,7 +12,7 @@ const Dashboard = () => {
       <DashboardAppbar mobileOpen={mobileOpen} setMobileOpen={setMobileOpen} />
       <MainDrawer mobileOpen={mobileOpen} setMobileOpen={setMobileOpen} />
       <MainContent />
-    </Grid>
+    </Grid> 
   );
 };
 export default Dashboard;

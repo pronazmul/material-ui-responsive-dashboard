@@ -5,6 +5,7 @@ import DrawerList from "./DrawerList";
 const MainDrawer = ({ mobileOpen, setMobileOpen }) => {
   const classes = dashboardStyle();
   return (
+
     <nav className={classes.drawer}>
       <Hidden smUp>
         <Drawer
@@ -36,6 +37,7 @@ const MainDrawer = ({ mobileOpen, setMobileOpen }) => {
           <DrawerList />
         </Drawer>
       </Hidden>
+      
     </nav>
   );
 };
